@@ -5,10 +5,10 @@
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/uduma-sonia/svelte-wizard.git"
-	  },
-	  "bugs": {
+	},
+	"bugs": {
 		"url": "https://github.com/uduma-sonia/svelte-wizard/issues"
-	  },
+	},
 	"homepage": "https://github.com/uduma-sonia/svelte-wizard",
 	"scripts": {
 		"dev": "vite dev",
@@ -30,10 +30,10 @@
 		"**/*.css"
 	],
 	"author": {
-    "name": "Sonia Uduma",
-    "email": "sohnyauduma@gmail.com",
-	"url": "https://sohnya.dev"
-    },
+		"name": "Sonia Uduma",
+		"email": "sohnyauduma@gmail.com",
+		"url": "https://sohnya.dev"
+	},
 	"keywords": [
 		"svelte-stepper",
 		"multi-step-form",
@@ -46,8 +46,8 @@
 		"svelte-step-wizard",
 		"svelte-form-wizard",
 		"svelte-form-stepper"
-	  ],
-   "license": "MIT",
+	],
+	"license": "MIT",
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"type": "module",
