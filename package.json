@@ -9,7 +9,7 @@
 	"bugs": {
 		"url": "https://github.com/uduma-sonia/svelte-wizard/issues"
 	},
-	"homepage": "https://github.com/uduma-sonia/svelte-wizard",
+	"homepage": "https://svelte-wizard.netlify.app/",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "svelte-kit sync && svelte-package",

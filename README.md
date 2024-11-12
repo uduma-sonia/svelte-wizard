@@ -1,8 +1,6 @@
 # Svelte-wizard
 
 <div align="center">
-  <br />
-  <br />
   <h3 align="center">A flexible and highly customizable stepper component for Svelte, perfect for building multi-step forms with progress indicators.</h3>
   <p align="center"> Tailor each step's style, navigation, and form state management to fit your app’s flow—without sacrificing flexibility or design.</p>
 
@@ -13,6 +11,12 @@
 </div>
 
 <br/>
+<br/>
+
+![GIF of Svelte Stepper in action](https://res.cloudinary.com/dbqgv8zl7/image/upload/v1731450316/record_jrxr2b.gif)
+
+### Interactive [Demo](https://svelte-wizard.netlify.app/)
+
 <br/>
 
 # Installation
@@ -96,7 +100,7 @@ Svelte Wizard library features a primary component that offers several props for
 
 <br/>
 
-## StepsList
+### StepsList
 
 | Props | Description                                    | Type                                 |
 | ----- | ---------------------------------------------- | ------------------------------------ |
@@ -106,7 +110,7 @@ Svelte Wizard library features a primary component that offers several props for
 
 <br/>
 
-## Options
+### Options
 
 | Props               | Description                                                                       | Type               | Default |
 | ------------------- | --------------------------------------------------------------------------------- | ------------------ | ------- |
@@ -121,7 +125,7 @@ Svelte Wizard library features a primary component that offers several props for
 
 <br/>
 
-## customClassnames
+### customClassnames
 
 | Props                   | Description                                                          | Type        |
 | ----------------------- | -------------------------------------------------------------------- | ----------- |
@@ -138,7 +142,7 @@ Svelte Wizard library features a primary component that offers several props for
 
 Svelte wizard provides custom events to the parent and child components giving control over navigation and form state management.
 
-## Examples
+### Examples
 
 <b>Parent Component</b>
 
@@ -298,4 +302,4 @@ Got ideas on how to make this better? Open an issue!
 
 ## ⚖️ Licence
 
-MIT (c) [Sonia](https://sohnya.dev/).
+MIT
