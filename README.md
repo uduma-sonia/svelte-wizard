@@ -212,16 +212,17 @@ Svelte Wizard offers streamlined state management through `wizardFormState`, whi
 ### `handleStateUpdate`
 
 The `handleStateUpdate` function accepts two arguments, with behavior determined by the type of the first argument.
+This setup allows for fine-grained control over `wizardFormState`, whether updating individual fields or replacing the entire state object.
 
 - `String` When the first argument is a string, it represents a key in `wizardFormState`. The second argument then becomes the value assigned to this key.
 
 - `Object` When the first argument is an object, the function merges it into `wizardFormState` by default. The second argument is optional and also an object.
 
+### Object props
+
 | Props      | Description                                                                                    | Type        |
 | ---------- | ---------------------------------------------------------------------------------------------- | ----------- |
 | replaceAll | If true, replaces the entire `wizardFormState` with the incoming object, instead of merging it | _`boolean`_ |
-
-This setup allows for fine-grained control over `wizardFormState`, whether updating individual fields or replacing the entire state object.
 
 ### Example
 
