@@ -17,6 +17,8 @@
 
 ### Interactive [Demo](https://svelte-wizard.netlify.app/)
 
+### [Playground](https://svelte.dev/playground/740a81ce5023497eba5c4ebd7f8ec6ad?version=5.1.16)
+
 <br/>
 
 # Installation
@@ -34,7 +36,7 @@ $ npm i svelte-wizard
 	import { WizardComponent } from 'svelte-wizard';
 	import StepOne from './StepOne.svelte';
 
-	const stepsList = [
+	let stepsList = [
 		{
 			step: StepOne,
 			title: 'Step one'
@@ -112,16 +114,16 @@ Svelte Wizard library features a primary component that offers several props for
 
 ### Options
 
-| Props               | Description                                                                       | Type               | Default |
-| ------------------- | --------------------------------------------------------------------------------- | ------------------ | ------- |
-| showTitles          | Display title for each step                                                       | _`boolean`_        | true    |
-| showOneTitle        | Display only the active step title                                                | _`boolean`_        | false   |
-| showCheckIcon       | Replaces step numbers with a checkmark icon for completed steps when set to true. | _`boolean`_        | false   |
-| showStepCount       | Show step numbers to indicate the current position.                               | _`boolean`_        | true    |
-| clickableNavigation | Allow users to click on step indicators to navigate directly to specific steps    | _`boolean`_        | false   |
-| shouldAnimate       | Enables animated transitions between steps for a smoother visual experience       | _`boolean`_        | true    |
-| showProgressBar     | Display a progress bar with indicators for each step                              | _`boolean`_        | true    |
-| defaultStep         | Specify the default step to start on                                              | _`number (index)`_ | 0       |
+| Props               | Description                                                                                            | Type               | Default |
+| ------------------- | ------------------------------------------------------------------------------------------------------ | ------------------ | ------- |
+| showTitles          | Display title for each step                                                                            | _`boolean`_        | true    |
+| showOneTitle        | Display only the active step title, `showTitles` and `showProgressBar` has to be true for this to work | _`boolean`_        | false   |
+| showCheckIcon       | Replaces step numbers with a checkmark icon for completed steps when set to true.                      | _`boolean`_        | false   |
+| showStepCount       | Show step numbers to indicate the current position.                                                    | _`boolean`_        | true    |
+| clickableNavigation | Allow users to click on step indicators to navigate directly to specific steps                         | _`boolean`_        | false   |
+| shouldAnimate       | Enables animated transitions between steps for a smoother visual experience                            | _`boolean`_        | true    |
+| showProgressBar     | Display a progress bar with indicators for each step                                                   | _`boolean`_        | true    |
+| defaultStep         | Specify the default step to start on                                                                   | _`number (index)`_ | 0       |
 
 <br/>
 
@@ -213,7 +215,7 @@ Svelte wizard provides custom events to the parent and child components giving c
 
 Svelte Wizard offers streamlined state management through `wizardFormState`, which is readily accessible to all child components. State updates are handled efficiently using the `handleStateUpdate` function, enabling seamless data flow and synchronization across steps
 
-### `handleStateUpdate`
+# handleStateUpdate
 
 The `handleStateUpdate` function accepts two arguments, with behavior determined by the type of the first argument.
 This setup allows for fine-grained control over `wizardFormState`, whether updating individual fields or replacing the entire state object.
@@ -224,9 +226,9 @@ This setup allows for fine-grained control over `wizardFormState`, whether updat
 
 ### Object props
 
-| Props      | Description                                                                                    | Type        |
-| ---------- | ---------------------------------------------------------------------------------------------- | ----------- |
-| replaceAll | If true, replaces the entire `wizardFormState` with the incoming object, instead of merging it | _`boolean`_ |
+| Props      | Description                                                                                    | Type      |
+| ---------- | ---------------------------------------------------------------------------------------------- | --------- |
+| replaceAll | If true, replaces the entire `wizardFormState` with the incoming object, instead of merging it | `boolean` |
 
 ### Example
 
@@ -257,7 +259,7 @@ This setup allows for fine-grained control over `wizardFormState`, whether updat
 
 ```
 
-### `defaultFormState`
+## defaultFormState
 
 Svelte wizard also accepts the `defaultFormState` props used to define default data for `wizardFormState`
 
@@ -295,11 +297,9 @@ Here’s how to apply custom CSS classes within a Svelte component, as opposed t
 ## Contribution
 
 Svelte-wizard is an open-source project and contributions are welcome.
-Got ideas on how to make this better? Open an issue!
 
-<br />
 <br />
 
 ## ⚖️ Licence
 
-MIT
+MIT (c) <a href="https://sohnya.dev/6" target="_blank">Sonia Uduma.</a>

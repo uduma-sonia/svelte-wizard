@@ -5,16 +5,16 @@
 
 	type StepperProps = {
 		stepsList: Array<{
-			step: __sveltets_2_IsomorphicComponent;
-			icon?: __sveltets_2_IsomorphicComponent;
+			step: any;
+			icon?: any;
 			title?: string;
 		}>;
-		defaultFormState?: Record<string, any>;
+		defaultFormState?: Record<string, unknown>;
 		customClassnames?: {
 			activeTitleClass?: string;
 			inactiveTitleClass?: string;
 			activeBarItemClass?: string;
-			inactiveBarItemClass?: string;
+			inactiveBgClass?: string;
 			activeStepNumberClass?: string;
 			inactiveStepNumberClass?: string;
 		};
@@ -54,8 +54,8 @@
 	let defaultClassnames = {
 		activeTitleClass: 'active_title_color',
 		inactiveTitleClass: 'inactive_title_color',
-		activeBarItemClass: 'active_bg_color',
-		inactiveBarItemClass: 'inactive_bg_color',
+		activeBgClass: 'active_bg_color',
+		inactiveBgClass: 'inactive_bg_color',
 		activeStepNumberClass: 'active_step_number_color',
 		inactiveStepNumberClass: 'inactive_step_number_color'
 	};
@@ -115,8 +115,8 @@
 		wizardFormState = {};
 	};
 	const handleStateUpdate = (
-		field: string | Record<string, any>,
-		value?: any | Record<string, any>
+		field: string | Record<string, unknown>,
+		value?: string | Record<string, unknown>
 	) => {
 		if (typeof field === 'string') {
 			wizardFormState = { ...wizardFormState, [field]: value };
@@ -154,11 +154,11 @@
 					{@const bgColor =
 						index <= currentStep
 							? mergedClassnames?.activeBarItemClass
-							: mergedClassnames?.inactiveBarItemClass}
+							: mergedClassnames?.inactiveBgClass}
 					{@const lineBgColor =
 						index < currentStep
 							? mergedClassnames?.activeBarItemClass
-							: mergedClassnames?.inactiveBarItemClass}
+							: mergedClassnames?.inactiveBgClass}
 					{@const stepNumberColor =
 						index <= currentStep
 							? mergedClassnames?.activeStepNumberClass

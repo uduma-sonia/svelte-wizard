@@ -1,6 +1,6 @@
 {
 	"name": "svelte-wizard",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A flexible and customizable stepper component for Svelte, perfect for building multi-step forms with progress indicators.",
 	"repository": {
 		"type": "git",
