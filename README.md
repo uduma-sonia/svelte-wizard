@@ -215,7 +215,7 @@ Svelte wizard provides custom events to the parent and child components giving c
 
 Svelte Wizard offers streamlined state management through `wizardFormState`, which is readily accessible to all child components. State updates are handled efficiently using the `handleStateUpdate` function, enabling seamless data flow and synchronization across steps
 
-# handleStateUpdate
+## handleStateUpdate
 
 The `handleStateUpdate` function accepts two arguments, with behavior determined by the type of the first argument.
 This setup allows for fine-grained control over `wizardFormState`, whether updating individual fields or replacing the entire state object.
@@ -302,4 +302,4 @@ Svelte-wizard is an open-source project and contributions are welcome.
 
 ## ⚖️ Licence
 
-MIT (c) <a href="https://sohnya.dev" target="_blank">Sonia Uduma.</a>
+MIT (c) [Sonia Uduma](https://sohnya.dev)
