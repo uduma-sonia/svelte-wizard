@@ -54,8 +54,8 @@
 	let defaultClassnames = {
 		activeTitleClass: 'active_title_color',
 		inactiveTitleClass: 'inactive_title_color',
-		activeBgClass: 'active_bg_color',
-		inactiveBgClass: 'inactive_bg_color',
+		activeBarItemClass: 'active_bg_color',
+		inactiveBarItemClass: 'inactive_bg_color',
 		activeStepNumberClass: 'active_step_number_color',
 		inactiveStepNumberClass: 'inactive_step_number_color'
 	};
@@ -65,6 +65,8 @@
 
 	$: mergedOptions = { ...defaultOptions, ...options };
 	$: mergedClassnames = { ...defaultClassnames, ...customClassnames };
+
+	console.log(mergedClassnames);
 
 	$: currentStep = mergedOptions?.defaultStep;
 	$: stepLength = stepsList.length;
@@ -146,27 +148,27 @@
 		{:else}
 			<div class="progress_bar_wrapper">
 				{#each stepsList as _item, index}
-					{@const titleColor =
+					{@const step_title_class =
 						index <= currentStep
 							? mergedClassnames?.activeTitleClass
 							: mergedClassnames?.inactiveTitleClass}
 
-					{@const bgColor =
+					{@const progress_bar_item_wrapper_class =
 						index <= currentStep
 							? mergedClassnames?.activeBarItemClass
-							: mergedClassnames?.inactiveBgClass}
-					{@const lineBgColor =
+							: mergedClassnames?.inactiveBarItemClass}
+					{@const progress_separator_line_class =
 						index < currentStep
 							? mergedClassnames?.activeBarItemClass
-							: mergedClassnames?.inactiveBgClass}
-					{@const stepNumberColor =
+							: mergedClassnames?.inactiveBarItemClass}
+					{@const stepNumberClass =
 						index <= currentStep
 							? mergedClassnames?.activeStepNumberClass
 							: mergedClassnames?.inactiveStepNumberClass}
 					{@const _cursor = mergedOptions?.clickableNavigation ? 'pointer' : 'inherit'}
 
 					<button
-						class="progress_bar_item_wrapper {bgColor}"
+						class="progress_bar_item_wrapper {progress_bar_item_wrapper_class}"
 						style="cursor: {_cursor}"
 						on:click={() => handleNavigation(index)}
 					>
@@ -177,13 +179,13 @@
 								{#if currentStep > index && mergedOptions?.showCheckIcon}
 									<Check />
 								{:else}
-									<span class={stepNumberColor}>{index + 1}</span>
+									<span class={stepNumberClass}>{index + 1}</span>
 								{/if}
 							</div>
 						{/if}
 						{#if mergedOptions?.showTitles}
 							<p
-								class="step_title {titleColor}"
+								class="step_title {step_title_class}"
 								class:left_0={index === 0}
 								class:right_0={index + 1 === stepLength}
 							>
@@ -193,7 +195,7 @@
 					</button>
 
 					{#if index < stepLength - 1}
-						<div class="progress_separator_line {lineBgColor}"></div>
+						<div class="progress_separator_line {progress_separator_line_class}"></div>
 					{/if}
 				{/each}
 			</div>
