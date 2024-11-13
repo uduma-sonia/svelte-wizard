@@ -302,4 +302,4 @@ Svelte-wizard is an open-source project and contributions are welcome.
 
 ## ⚖️ Licence
 
-MIT (c) <a href="https://sohnya.dev/6" target="_blank">Sonia Uduma.</a>
+MIT (c) <a href="https://sohnya.dev" target="_blank">Sonia Uduma.</a>
