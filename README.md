@@ -93,52 +93,51 @@ $ npm i svelte-wizard
    <WizardComponent stepsList={stepsList} customClassnames={customClassnames}  />
 ```
 
- <br/>
-<br/>
+<br/><br/>
 
 # Props
 
-Svelte Wizard library features a primary component that offers several props for customization, allowing for extensive flexibility and tailored configurations to suit various use cases
+Svelte Wizard features a primary component that offers several props for customization, allowing for extensive flexibility and tailored configurations to suit various use cases.
 
 <br/>
 
 ### StepsList
 
-| Props | Description                                    | Type                                 |
-| ----- | ---------------------------------------------- | ------------------------------------ |
-| step  | Svelte component to be rendered for each steps | _`__sveltets_2_IsomorphicComponent`_ |
-| title | Step title                                     | _`string`_                           |
-| icon  | Icon to be rendered.                           | _`__sveltets_2_IsomorphicComponent`_ |
+| Props | Description                                    | Type              |
+| ----- | ---------------------------------------------- | ----------------- |
+| step  | Svelte component to be rendered for each steps | `SvelteComponent` |
+| title | Step title                                     | `string`          |
+| icon  | Icon to be rendered.                           | `SvelteComponent` |
 
 <br/>
 
 ### Options
 
-| Props               | Description                                                                                            | Type               | Default |
-| ------------------- | ------------------------------------------------------------------------------------------------------ | ------------------ | ------- |
-| showTitles          | Display title for each step                                                                            | _`boolean`_        | true    |
-| showOneTitle        | Display only the active step title, `showTitles` and `showProgressBar` has to be true for this to work | _`boolean`_        | false   |
-| showCheckIcon       | Replaces step numbers with a checkmark icon for completed steps when set to true.                      | _`boolean`_        | false   |
-| showStepCount       | Show step numbers to indicate the current position.                                                    | _`boolean`_        | true    |
-| clickableNavigation | Allow users to click on step indicators to navigate directly to specific steps                         | _`boolean`_        | false   |
-| shouldAnimate       | Enables animated transitions between steps for a smoother visual experience                            | _`boolean`_        | true    |
-| showProgressBar     | Display a progress bar with indicators for each step                                                   | _`boolean`_        | true    |
-| defaultStep         | Specify the default step to start on                                                                   | _`number (index)`_ | 0       |
+| Props               | Description                                                                                            | Type             | Default |
+| ------------------- | ------------------------------------------------------------------------------------------------------ | ---------------- | ------- |
+| showTitles          | Display title for each step                                                                            | `boolean`        | true    |
+| showOneTitle        | Display only the active step title, `showTitles` and `showProgressBar` has to be true for this to work | `boolean`        | false   |
+| showCheckIcon       | Replaces step numbers with a checkmark icon for completed steps when set to true.                      | `boolean`        | false   |
+| showStepCount       | Show step numbers to indicate the current position.                                                    | `boolean`        | true    |
+| clickableNavigation | Allow users to click on step indicators to navigate directly to specific steps                         | `boolean`        | false   |
+| shouldAnimate       | Enables animated transitions between steps for a smoother visual experience                            | `boolean`        | true    |
+| showProgressBar     | Display a progress bar with indicators for each step                                                   | `boolean`        | true    |
+| defaultStep         | Specify the default step to start on                                                                   | `number (index)` | 0       |
 
 <br/>
 
 ### customClassnames
 
-| Props                   | Description                                                          | Type        |
-| ----------------------- | -------------------------------------------------------------------- | ----------- |
-| activeTitleClass        | Set a custom CSS class to the title of the active/completed steps    | _`boolean`_ |
-| inactiveTitleClass      | Set a custom CSS class to the title of inactive steps                | _`boolean`_ |
-| activeBarItemClass      | Set a custom CSS class to the active/completed step item (dot, line) | _`boolean`_ |
-| inactiveBarItemClass    | Set a custom CSS class for the inactive step item (dot, line)        | _`boolean`_ |
-| activeStepNumberClass   | Set a custom CSS class to the number of the active/current step      | _`boolean`_ |
-| inactiveStepNumberClass | Set a custom CSS class to the number of the inactive step            | _`boolean`_ |
+| Props                   | Description                                                          | Type      |
+| ----------------------- | -------------------------------------------------------------------- | --------- |
+| activeTitleClass        | Set a custom CSS class to the title of the active/completed steps    | `boolean` |
+| inactiveTitleClass      | Set a custom CSS class to the title of inactive steps                | `boolean` |
+| activeBarItemClass      | Set a custom CSS class to the active/completed step item (dot, line) | `boolean` |
+| inactiveBarItemClass    | Set a custom CSS class for the inactive step item (dot, line)        | `boolean` |
+| activeStepNumberClass   | Set a custom CSS class to the number of the active/current step      | `boolean` |
+| inactiveStepNumberClass | Set a custom CSS class to the number of the inactive step            | `boolean` |
 
-<br/>
+<br/><br/>
 
 # Events
 
@@ -199,17 +198,17 @@ Svelte wizard provides custom events to the parent and child components giving c
 
 ```
 
-| Props                | Description                                                                                           | Type                |
-| -------------------- | ----------------------------------------------------------------------------------------------------- | ------------------- |
-| handleStateUpdate    | Allow dynamic updates to the step state by modifying specific fields or entire parts of the form data | _`EventDispatcher`_ |
-| on:handleNext        | Navigate to the next step                                                                             | _`EventDispatcher`_ |
-| on:handleBack        | Navigate to the previous step                                                                         | _`EventDispatcher`_ |
-| on:handleSkipTo      | Jump directly to a specified step based on the index passed in the event                              | _`EventDispatcher`_ |
-| on:handleSkipToEnd   | Jump to the last step                                                                                 | _`EventDispatcher`_ |
-| on:handleSkipToStart | Jump to the first step                                                                                | _`EventDispatcher`_ |
-| on:handleReset       | Reset the entire form state and navigates back to the starting step                                   | _`EventDispatcher`_ |
+| Props                | Description                                                                                           | Type              |
+| -------------------- | ----------------------------------------------------------------------------------------------------- | ----------------- |
+| handleStateUpdate    | Allow dynamic updates to the step state by modifying specific fields or entire parts of the form data | `EventDispatcher` |
+| on:handleNext        | Navigate to the next step                                                                             | `EventDispatcher` |
+| on:handleBack        | Navigate to the previous step                                                                         | `EventDispatcher` |
+| on:handleSkipTo      | Jump directly to a specified step based on the index passed in the event                              | `EventDispatcher` |
+| on:handleSkipToEnd   | Jump to the last step                                                                                 | `EventDispatcher` |
+| on:handleSkipToStart | Jump to the first step                                                                                | `EventDispatcher` |
+| on:handleReset       | Reset the entire form state and navigates back to the starting step                                   | `EventDispatcher` |
 
-<br/>
+<br/><br/>
 
 # State Management
 
@@ -267,7 +266,7 @@ Svelte wizard also accepts the `defaultFormState` props used to define default d
 <WizardComponent defaultFormState={{ firstName: '' }} />
 ```
 
-<br/>
+<br/><br/>
 
 # Using Custom Classes
 
