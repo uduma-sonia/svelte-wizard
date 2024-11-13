@@ -21,6 +21,15 @@
 
 <br/>
 
+# ⚡️ Features
+
+- Custom Styles
+- Step Navigation
+- State Management
+- Progress Bar
+- Event Dispatching
+- Dynamic Content
+
 # Installation
 
 ```
